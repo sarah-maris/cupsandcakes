@@ -96,15 +96,14 @@
     font-style: normal;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #581e00;
+html {
+  font-size: 18px;
 }
+
+
+
+
+
 .cupscakes h2 {
   color: #9bcd5f;
   font: 22px/22px 'Changa One',  Arial, sans-serif;
@@ -336,6 +335,28 @@ font-size: 80px;
 
 .row img {
   margin-bottom: 20px;
+}
+
+
+/* Remove number of comments from "Comments" page */
+.page-template-page-comments .comments-title,
+.page-template-page-comments .comment-author {
+  display: none;
+}
+
+/* Change color and font for date */
+.page-template-page-comments .comment-metadata {
+  color: #9bcd5f;
+  font: bold 0.9rem Crimson Text;
+}
+
+/* Change color and font for date */
+.page-template-page-comments .comment-meta {
+  margin-bottom: 0.5rem;
+}
+
+.page-template-page-comments .reply {
+  float: right;
 }
 
 /* colors
