@@ -1,0 +1,364 @@
+/*--
+  Theme Name: Cups and Cakes 2017
+  Description: Revised theme for Cups and Cakes website by Sarah Maris 2017
+  Template: twentyseventeen
+  Version: 1.0
+  Cups and Cakes Revised: 1/12/2017
+
+--*/
+
+
+/*
+ * TABLE OF CONTENTS
+ * -----------------
+ *  1.0 - Add Machine fonts
+ *   .1 - machine script
+ *   .2 - apply fonts
+ *
+ *  2.0 - Color changes
+ *   .1 - links to blue (formerly aqua)
+ *   .2 - hover to green (formerly red)
+ *   .3 - post title and other links to brown machine (formerly aqua, default font)
+ *
+ *  3.0 - Navigation
+ *   .1 - full width menu
+ *   .2 - nav background oolor
+ *   .3 - hover colors for nav background and text
+ *   .4 - sub nav tab
+ *   .5 - sub nav text and background color
+ *   .6 - sub nav hover color
+ *
+ *  4.0 - Slider
+ *   .1 - green background
+ *   .2 - reduce wrap around slider
+ *   .3 - blue slider caption
+ *   .4 - adjust styling of caption
+ *   .5 - mystery parts to blue
+ *
+ *  5.0 - Header
+ *   .1 - set up
+ *   .2 - hours block
+ *   .3 - address block
+ *   .4 - title block
+ *   .5 - header top to brown (from aqua)
+ *   .6 - remove fade behind logo
+ *
+ *  6.0 - Recent Posts Widget
+ *   .1 - add square bullet and reduce vertical space
+ *   .2 - title color to green
+ *   .3 - change hover to brown and remove underline
+ *   .4 - move date to separate line
+ *
+ *  7.0 - Home Page
+ *   .1 - reduce column margins
+ *   .2 - reduce padding between title and top of content
+ *
+ *  8.0 - Other Pages
+ *   .1 - border images
+ *   .2 - increase height of page title  (to avoid cut-off)
+ *   .3 - increase font size for paragraph under page title
+ *
+ *  9.0 - Post Pages
+ *   .1 - center image
+ *   .2 - add padding on top of sidebar (to make it even with top of content)
+ *   .3 - sidebar widget title to smaller Machine Script
+ *
+ * 10.0 - Comments
+ *   .1 - remove comment author
+ *   .2 - comment headers brown
+ *   .3 - comment background
+ *   .4 - padding on top of comment section
+ *
+ * 11.0 - Media Calls
+ *   .1 - 920px - 1260px
+ *   .2 - < 980px
+ *   .3 - 768px - 1199px
+ *   .4 - 768px - 979px
+ *   .5 - < 767px
+ *   .6 - 525 - 767px
+ *   .7 - < 524px
+ *   .8  < 420px
+ */
+
+/* 1.0 Add Machine Script font
+ *----------------------------*/
+
+/* 1.0 Machine Script font */
+@font-face {
+    font-family: 'machinescriptregular';
+    src: url('fonts/machine-script/MachineScript-webfont.eot');
+    src: url('fonts/machine-script/MachineScript-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/machine-script/MachineScript-webfont.woff2') format('woff2'),
+         url('fonts/machine-script/MachineScript-webfont.woff') format('woff'),
+         url('fonts/machine-script/MachineScript-webfont.ttf') format('truetype'),
+         url('fonts/machine-script/MachineScript-webfont.svg#machinescriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #581e00;
+}
+.cupscakes h2 {
+  color: #9bcd5f;
+  font: 22px/22px 'Changa One',  Arial, sans-serif;
+
+  text-transform: uppercase;
+}
+
+.cupscakes a {
+  color: #9bcd5f;
+ box-shadow: none;
+}
+
+.cupscakes a:hover {
+  color: #c7de8e;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.site-description {
+      font-family: Crimson Text;
+    font-size: 22px;
+}
+
+.custom-logo-link img {
+  width: 200px;
+  max-height: inherit;
+  
+}
+	.navigation-top {
+color: #581e00;
+		font-size: 14px;
+
+	}
+  
+  .navigation-top a {
+color: #581e00;
+}
+
+.navigation-top .current-menu-item > a,
+.navigation-top .current_page_item > a {
+	color: #9bcd5f;
+}
+  
+.social-navigation a {
+	background-color: #581e00;
+	color: #fff;
+}
+
+.header-social {
+    position: fixed;
+    z-index: 500;
+    right: 0;
+    top: 20px;
+    text-align: right;
+}
+
+.wp-custom-header .wp-custom-header-video-button {
+  left: 0;
+}
+
+.cupscakes-hours {
+    position: fixed;
+    z-index: 500;
+    right: 10px;
+    top: 75px;
+    color: #9bcd5f;
+}
+
+.home .entry-header {
+  display: none;
+}
+
+/* 8.0 Other pages
+ *----------------------------*/
+
+/* 8.1 Border images (to create lines between sections) */
+
+.breakfast{
+  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/coffee.gif");
+  background-repeat: repeat-x;
+  width: 100%;
+  margin :30px 0;
+}
+
+.celebrations{
+  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/gift-pink.gif");
+  background-repeat: repeat-x;
+  width: 100%;
+  margin :30px 0;
+}
+
+.desserts{
+  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/star.gif");
+  background-repeat: repeat-x;
+  width: 100%;
+  margin :30px 0;
+}
+
+.gift-baskets{
+  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/gift.gif");
+  background-repeat: repeat-x;
+  width: 100%;
+  margin :30px 0;
+}
+
+.juice-bar{
+  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/apple.gif");
+  background-repeat: repeat-x;
+  width: 100%;
+  margin :30px 0;
+}
+
+.smoothies{
+  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/citrus.gif");
+  background-repeat: repeat-x;
+  width: 100%;
+  margin :30px 0;
+}
+
+.cleanse{
+  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/stem.gif");
+  background-repeat: repeat-x;
+  width: 100%;
+  margin :30px 0;
+}
+
+.cupscakes {
+  background-color: green;
+}
+
+/* 8.2 Increase height of title header (to avoid cut-off) */
+body.page:not(.twentyseventeen-front-page) .entry-title,
+.entry-content h1 {
+  line-height: 175%;
+  font-size: 60px;
+  color: red;
+  letter-spacing: normal;
+  font: normal 45px/45px Crimson Text;  color:#581e00; 
+  text-transform: none;
+}
+
+.site.cupscakes .entry-header {
+  margin: 0;
+}
+/* 8.3 Increase font size for paragraph under page title*/
+#content.row > div > div.page > p:nth-child(1){
+  font-size: 18px;
+}
+
+/* 9.0 Post Pages
+ *----------------------------*/
+
+/* 9.1 Center image in  post */
+.cupscakes_single .post_content div {
+  text-align: center;
+}
+
+.cupscakes_single  .post_content img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 9.2 Add padding on top of sidebar (to make it even with top of content)*/
+.cupscakes_sidebar.sidebar {
+  padding-top: 40px;
+}
+
+/* 9.3 Change sidebar widget title to smaller Machine Script*/
+.cupscakes_sidebar h3.widget-title{
+  font: 18px/18px machinescriptregular;
+}
+
+/* 10.0 Customer Comments
+ *----------------------------*/
+
+/* 10.1 Remove comment author name */
+.comment .comment-author .author {
+  display: none;
+}
+
+/* 10.2 Comment header brown */
+#comments .comments-h.cups-comments,
+#respond.cups-comments  h3{
+  color: #581e00;
+}
+
+/* 10.3 Comment input field light green */
+.comment-holder .cups-list .comment .comment-body,
+#respond .field.cups-list input,
+#respond.cups-comments textarea{
+  background-color: #f5faef;
+}
+
+/* 10.4 Add padding to top of comments section */
+#comments {
+  padding-top: 40px;
+}
+
+#cupscakes_title {
+    font-family: 'Crimson Text' !important;
+    letter-spacing: -2px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+body.page-template-page-full-width #primary .entry-header .entry-title {
+font-size: 3rem;
+font-size: 48px;
+}
+
+@media screen and (min-width: 48em) {
+body.page-template-page-full-width #primary .page-full-width .entry-content {
+width: 100%;
+}
+
+body.page-template-page-full-width #primary .page-full-width .entry-header {
+width: 100%;
+}
+
+body.page-template-page-full-width #primary .entry-header .entry-title {
+font-size: 5rem;
+font-size: 80px;
+}
+}
+
+.spacer {
+  height: 20px;
+}
+
+.row img {
+  margin-bottom: 20px;
+}
+
+/* colors
+
+Logo colors
+  mid green(&): #c7de8e
+  dark green(tea cup): #9bcd5f
+  blue (cupcake wrapper): #5162ac;
+  dark blue (pedestal):1D1160
+  dark brown (text): #581e00
+
+Other colors: <-- not used
+  very light green: #e4efc9 #f5faef
+  lighter brown: #DECD8E
+  tan #d5c5b5
+  cherry: #FB4554;
+
+Styling defaults in options.php:
+  header background: #9bcd5f
+  site background: #fff
+  body text: #581e00
+  link color: #9bcd5f
+  link hover: #581e00
+  h1, h3, h4, h5, h6: #9bcd5f
+  h2: #9bcd5f
+*/
