@@ -2,14 +2,8 @@
 /**
  * Template part for displaying pages on front page
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- * @version 1.0
- *
- * Revised by Sarah Maris for ensureye.com
- * Updated: 11-21-16
+ * Revised by Sarah Maris for cupsandcakes.com
+ * Updated: 02-04-17
  */
 
 global $twentyseventeencounter;
@@ -31,7 +25,7 @@ global $twentyseventeencounter;
 
   <?php endif; ?>
 
-  <?php // *** ENSUREYE CHANGE: add custom color class to panel   ***
+  <?php // *** CUPS AND CAKES CHANGE: add custom color class to panel   ***
     $terms =  get_the_terms(  $post, 'page_classes' );
     $page_classes = '';
 		if ($terms){
