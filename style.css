@@ -11,109 +11,62 @@
 /*
  * TABLE OF CONTENTS
  * -----------------
- *  1.0 - Add Machine fonts
- *   .1 - machine script
- *   .2 - apply fonts
+ *  1.0 - site basics
+ *   .1 - font sizes
  *
- *  2.0 - Color changes
- *   .1 - links to blue (formerly aqua)
- *   .2 - hover to green (formerly red)
- *   .3 - post title and other links to brown machine (formerly aqua, default font)
+ *  2.0 - header
+ *   .1 - site description and logo
+ *   .2 - navigation
+ *   .3 - social media links
+ *   .4 - hours
+ *   .5 - video button
  *
- *  3.0 - Navigation
- *   .1 - full width menu
- *   .2 - nav background oolor
- *   .3 - hover colors for nav background and text
- *   .4 - sub nav tab
- *   .5 - sub nav text and background color
- *   .6 - sub nav hover color
+ *  3.0 - Pages
+ *   .1 - hide home page header
+ *   .2 - page title header
+ *   .3 - page section colors
+ *   .4 - border images
  *
- *  4.0 - Slider
- *   .1 - green background
- *   .2 - reduce wrap around slider
- *   .3 - blue slider caption
- *   .4 - adjust styling of caption
- *   .5 - mystery parts to blue
+ *  4.0 - Comments
+ *   .1 - remove comment author and number of comments
+ *   .2 - change color and font for comment date
+ *   .3 - reduce vertical spacing
+ *   .4 - move reply to right
  *
- *  5.0 - Header
- *   .1 - set up
- *   .2 - hours block
- *   .3 - address block
- *   .4 - title block
- *   .5 - header top to brown (from aqua)
- *   .6 - remove fade behind logo
+ *  5.0 - News page
+ *   .1 - create box for post
+ *   .2 - content styling
  *
- *  6.0 - Recent Posts Widget
- *   .1 - add square bullet and reduce vertical space
- *   .2 - title color to green
- *   .3 - change hover to brown and remove underline
- *   .4 - move date to separate line
+ * 11.0 - Media Queries
+ *   .1 - > 320px
+ *   .2 - > 480px
+ *   .3 - > 672px
+ *   .4 - > 768px
+ *   .5 - > 880px
+ *   .6 - > 1072px
+ *   .7 - > 1264px
  *
- *  7.0 - Home Page
- *   .1 - reduce column margins
- *   .2 - reduce padding between title and top of content
- *
- *  8.0 - Other Pages
- *   .1 - border images
- *   .2 - increase height of page title  (to avoid cut-off)
- *   .3 - increase font size for paragraph under page title
- *
- *  9.0 - Post Pages
- *   .1 - center image
- *   .2 - add padding on top of sidebar (to make it even with top of content)
- *   .3 - sidebar widget title to smaller Machine Script
- *
- * 10.0 - Comments
- *   .1 - remove comment author
- *   .2 - comment headers brown
- *   .3 - comment background
- *   .4 - padding on top of comment section
- *
- * 11.0 - Media Calls
- *   .1 - 920px - 1260px
- *   .2 - < 980px
- *   .3 - 768px - 1199px
- *   .4 - 768px - 979px
- *   .5 - < 767px
- *   .6 - 525 - 767px
- *   .7 - < 524px
- *   .8  < 420px
  */
 
-/* 1.0 Add Machine Script font
+
+/* 1.0 Site basics
  *----------------------------*/
 
-/* 1.0 Machine Script font */
-@font-face {
-    font-family: 'machinescriptregular';
-    src: url('fonts/machine-script/MachineScript-webfont.eot');
-    src: url('fonts/machine-script/MachineScript-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/machine-script/MachineScript-webfont.woff2') format('woff2'),
-         url('fonts/machine-script/MachineScript-webfont.woff') format('woff'),
-         url('fonts/machine-script/MachineScript-webfont.ttf') format('truetype'),
-         url('fonts/machine-script/MachineScript-webfont.svg#machinescriptregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+/* 1.1 Font sizes */
 
 html {
   font-size: 18px;
 }
 
-
-
-
-
 .cupscakes h2 {
   color: #9bcd5f;
   font: 22px/22px 'Changa One',  Arial, sans-serif;
-
   text-transform: uppercase;
 }
 
 .cupscakes a {
   color: #9bcd5f;
- box-shadow: none;
+  box-shadow: none;
 }
 
 .cupscakes a:hover {
@@ -122,48 +75,49 @@ html {
   text-decoration: none;
 }
 
+/* 2.0 Header
+ *----------------------------*/
+
+/* 2.1 Site description and logo */
+
 .site-description {
-      font-family: Crimson Text;
-    font-size: 22px;
+  font-family: Crimson Text;
+  font-size: 22px;
 }
 
 .custom-logo-link img {
   width: 200px;
   max-height: inherit;
-  
 }
-	.navigation-top {
-color: #581e00;
-		font-size: 14px;
 
-	}
-  
-  .navigation-top a {
-color: #581e00;
+/* 2.2 Navigation */
+
+.navigation-top a {
+  color: #581e00;
+  font-size: 14px;
+  padding: 0.5em;
 }
 
 .navigation-top .current-menu-item > a,
 .navigation-top .current_page_item > a {
-	color: #9bcd5f;
+  color: #9bcd5f;
 }
-  
+
+/* 2.3 Social Media links */
 .social-navigation a {
-	background-color: #581e00;
-	color: #fff;
+  background-color: #581e00;
+  color: #fff;
 }
 
 .header-social {
-    position: fixed;
-    z-index: 500;
-    right: 0;
-    top: 20px;
-    text-align: right;
+  position: fixed;
+  z-index: 500;
+  right: 0;
+  top: 20px;
+  text-align: right;
 }
 
-.wp-custom-header .wp-custom-header-video-button {
-  left: 0;
-}
-
+/* 2.4 Hours */
 .cupscakes-hours {
     position: fixed;
     z-index: 500;
@@ -172,15 +126,37 @@ color: #581e00;
     color: #9bcd5f;
 }
 
+/* 2.5 Video button */
+.wp-custom-header .wp-custom-header-video-button {
+  left: 0;
+}
+
+/* 3.0 Other pages
+ *----------------------------*/
+
+/* 3.1 Remove entry header on home page */
 .home .entry-header {
   display: none;
 }
 
-/* 8.0 Other pages
- *----------------------------*/
+.site.cupscakes .entry-header {
+  margin: 0;
+}
 
-/* 8.1 Border images (to create lines between sections) */
+/* 3.2 Page title header */
+body.page:not(.twentyseventeen-front-page) .entry-title,
+.entry-content h1 {
+  line-height: 175%;
+  font-size: 60px;
+  letter-spacing: normal;
+  font: normal 45px/45px Crimson Text;  color:#581e00;
+  text-transform: none;
+}
 
+/* 3.2 Page section colors*/
+
+
+/* 3.3 Border images (to create lines between sections) */
 .breakfast{
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/coffee.gif");
   background-repeat: repeat-x;
@@ -234,25 +210,66 @@ color: #581e00;
   background-color: green;
 }
 
-/* 8.2 Increase height of title header (to avoid cut-off) */
-body.page:not(.twentyseventeen-front-page) .entry-title,
-.entry-content h1 {
-  line-height: 175%;
-  font-size: 60px;
-  color: red;
-  letter-spacing: normal;
-  font: normal 45px/45px Crimson Text;  color:#581e00; 
-  text-transform: none;
+
+/* 4.0 Customer Comments
+ *----------------------------*/
+
+/* 4.1 Remove number of comments and author from "Comments" page */
+.page-comments .comments-title,
+.page-comments .comment-author {
+  display: none;
 }
 
-.site.cupscakes .entry-header {
-  margin: 0;
-}
-/* 8.3 Increase font size for paragraph under page title*/
-#content.row > div > div.page > p:nth-child(1){
-  font-size: 18px;
+/* 4.2 Change color and font for date */
+.page-comments .comment-metadata {
+  color: #9bcd5f;
+  font: bold 0.9rem Crimson Text;
 }
 
+/* 4.3 Reduce vertical spacing for comment meta data */
+.page-comments .comment-meta {
+  margin-bottom: 0.5rem;
+}
+
+/* 4.4 Move "Reply" arrow to the right */
+.page-comments .reply {
+  /*float: right; */
+}
+
+
+/* 5.0 News Page
+ *----------------------------*/
+
+/* 5.1 Create box around post */
+.page-template-page-posts  .post {
+  background: #f5faef;
+  border: 2px solid #581e00;
+  border-radius: 5px;
+  width: 100%;
+  margin: 5px 0 5px 10px;
+  padding: 15px;
+  font-size: 0px; /* hide non-working instagram links */
+}
+
+/* 5.2 Content styling */
+.cups-masonry-container img{
+  width: 100%;
+}
+
+.cups-masonry-container time{
+  color: #581e00;
+}
+
+.cups-masonry-container .edit-link {
+  display:none;
+}
+
+.cups-masonry-container .entry-title a {
+ font-size: 36px;
+ line-height: 1;
+}
+
+/* TODO: FIX POST PAGES *?
 /* 9.0 Post Pages
  *----------------------------*/
 
@@ -271,44 +288,8 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
   padding-top: 40px;
 }
 
-/* 9.3 Change sidebar widget title to smaller Machine Script*/
-.cupscakes_sidebar h3.widget-title{
-  font: 18px/18px machinescriptregular;
-}
 
-/* 10.0 Customer Comments
- *----------------------------*/
-
-/* 10.1 Remove comment author name */
-.comment .comment-author .author {
-  display: none;
-}
-
-/* 10.2 Comment header brown */
-#comments .comments-h.cups-comments,
-#respond.cups-comments  h3{
-  color: #581e00;
-}
-
-/* 10.3 Comment input field light green */
-.comment-holder .cups-list .comment .comment-body,
-#respond .field.cups-list input,
-#respond.cups-comments textarea{
-  background-color: #f5faef;
-}
-
-/* 10.4 Add padding to top of comments section */
-#comments {
-  padding-top: 40px;
-}
-
-#cupscakes_title {
-    font-family: 'Crimson Text' !important;
-    letter-spacing: -2px;
-    font-size: 48px;
-    font-weight: bold;
-}
-
+/* May be needed for pages */
 body.page-template-page-full-width #primary .entry-header .entry-title {
 font-size: 3rem;
 font-size: 48px;
@@ -338,26 +319,70 @@ font-size: 80px;
 }
 
 
-/* Remove number of comments from "Comments" page */
-.page-template-page-comments .comments-title,
-.page-template-page-comments .comment-author {
-  display: none;
+/* 9.0 Media Queries
+ *----------------------------*/
+
+@media screen and (min-width: 20em) { /* 320px */
+
 }
 
-/* Change color and font for date */
-.page-template-page-comments .comment-metadata {
-  color: #9bcd5f;
-  font: bold 0.9rem Crimson Text;
+@media screen and (min-width: 30em) { /* 480px */
+
 }
 
-/* Change color and font for date */
-.page-template-page-comments .comment-meta {
-  margin-bottom: 0.5rem;
+
+@media screen and (min-width: 42em) { /* 672px */
+
+  .page-template-page-posts  .post {
+   width: 48%
+  }
+
 }
 
-.page-template-page-comments .reply {
-  float: right;
+@media screen and (min-width: 48em) { /* 768px */
+
+  .page.page-one-column:not(.twentyseventeen-front-page) #primary,
+  .archive.page-one-column:not(.has-sidebar) .page-header,
+  .archive.page-one-column:not(.has-sidebar) #primary {
+      max-width: 1000px;
+  }
+
+  .wrap {
+    max-width: 1000px;
+  }
 }
+
+@media screen and (min-width: 55em) { /* 880px */
+
+  .navigation-top a {
+    padding: 1em;
+  }
+
+  .page-template-page-posts  .post {
+   width: 32%
+  }
+
+}
+
+
+
+@media screen and (min-width: 67em) { /* 1072px */
+
+
+}
+
+@media screen and (min-width: 79em) { /* 1264px */
+
+  .navigation-top a {
+    font-size: 16px;
+  }
+
+  .wrap {
+    max-width: 1200px;
+    padding: 0;
+  }
+}
+
 
 /* colors
 
