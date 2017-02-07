@@ -23,6 +23,7 @@
 <div id="page" class="site cupscakes">
   <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
         <?php if ( has_nav_menu( 'social' ) ) : ?>
+        <div class="cups-top">
           <div class="social-navigation header-social" role="navigation" aria-label="<?php _e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
             <?php
               wp_nav_menu( array(
@@ -35,12 +36,13 @@
             ?>
           </div><!-- .social-navigation -->
         <?php endif;?>
-<div class="cupscakes-hours">
-  <!--Mon-Wed 6:00AM-5:00PM<br>
-  Thurs–Sat: 6:00AM-10:00PM<br>-->
-  Mon-Sat 6:00AM-5:00PM<br>
-  Sunday: 6:00AM–2:00PM
-</div>
+          <div class="cupscakes-hours">
+            <!--Mon-Wed 6:00AM-5:00PM<br>
+            Thurs–Sat: 6:00AM-10:00PM<br>-->
+            Mon-Sat 6:00AM-5:00PM<br>
+            Sunday: 6:00AM–2:00PM
+          </div>
+        </div> <!-- .cups-top -->
   <header id="masthead" class="site-header" role="banner">
 
     <?php get_template_part( 'template-parts/header/header', 'image' ); ?>
