@@ -23,7 +23,7 @@
 <div id="page" class="site cupscakes">
   <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
         <?php if ( has_nav_menu( 'social' ) ) : ?>
-        <div class="cups-top">
+        <div id="cups-top">
           <div class="social-navigation header-social" role="navigation" aria-label="<?php _e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
             <?php
               wp_nav_menu( array(

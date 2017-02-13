@@ -20,6 +20,7 @@
  *   .3 - social media links
  *   .4 - hours
  *   .5 - video button
+ *   .6 - hide on scroll
  *
  *  3.0 - Pages
  *   .1 - hide home page header
@@ -36,6 +37,11 @@
  *  5.0 - News page
  *   .1 - create box for post
  *   .2 - content styling
+ *
+ *
+ *  6.0 - Home page flexbox
+ *   .1 - create grid
+ *   .2 - remove border
  *
  * 11.0 - Media Queries
  *   .1 - > 320px
@@ -56,6 +62,14 @@
 
 html {
   font-size: 18px;
+}
+
+body {
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	color: #581e00;
 }
 
 .cupscakes h2 {
@@ -130,6 +144,14 @@ html {
 .wp-custom-header .wp-custom-header-video-button {
   left: 0;
 }
+
+/* 2.6 Hide/move on scroll */
+.hide-social,
+.hide-hours {
+  display: none;
+}
+
+
 
 /* 3.0 Other pages
  *----------------------------*/
@@ -269,6 +291,39 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
  line-height: 1;
 }
 
+/* 6.0 Home Page flexbox
+ *----------------------------*/
+
+/* 6.1 Create grid */
+.home-grid {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.twentyseventeen-front-page article.home-box {
+  flex-basis: 33%;
+  padding: 10px;
+}
+
+/* 6.1 remove top border */
+.twentyseventeen-front-page article.home-box,
+.twentyseventeen-front-page article:not(.has-post-thumbnail):not(:first-child){
+    border-top: none;
+}
+
+/* 6.2 adjust spacing */
+.home-box-title {
+  margin: 0;
+  padding: 10px 0 0;
+}
+
+.home-box p {
+  margin: 0;
+  line-height: 1.25;
+}
+
+
+
 /* TODO: FIX POST PAGES *?
 /* 9.0 Post Pages
  *----------------------------*/
@@ -328,13 +383,17 @@ font-size: 80px;
 
 @media screen and (min-width: 30em) { /* 480px */
 
+  .page-one-column .panel-content .wrap {
+    max-width: 1000px;
+  }
+
 }
 
 
 @media screen and (min-width: 42em) { /* 672px */
 
   .page-template-page-posts  .post {
-   width: 48%
+    width: 48%
   }
 
 }
@@ -344,12 +403,9 @@ font-size: 80px;
   .page.page-one-column:not(.twentyseventeen-front-page) #primary,
   .archive.page-one-column:not(.has-sidebar) .page-header,
   .archive.page-one-column:not(.has-sidebar) #primary {
-      max-width: 1000px;
-  }
-
-  .wrap {
     max-width: 1000px;
   }
+
 }
 
 @media screen and (min-width: 55em) { /* 880px */
@@ -364,10 +420,10 @@ font-size: 80px;
 
 }
 
-
-
 @media screen and (min-width: 67em) { /* 1072px */
-
+  .hide-social {
+    display: block;
+  }
 
 }
 
@@ -382,6 +438,8 @@ font-size: 80px;
     padding: 0;
   }
 }
+
+
 
 
 /* colors

@@ -3,7 +3,7 @@
  * Additional Functions
  *
  * Designed by Sarah Maris for CupsandCakesRumson.com based on TwentySeventeen theme
- * revised  2/05/2017
+ * revised  2/12/2017
  *
  **/
 
@@ -24,12 +24,12 @@
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
 function enqueue_parent_styles() {
-   wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Changa+One|Crimson+Text:400,700', false );
-   wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
-//   wp_enqueue_style('bootstrap-css',get_stylesheet_directory_uri().'/bootstrap/css/bootstrap.min.css');
-//   wp_enqueue_script('bootstrap-js',get_stylesheet_directory_uri().'/bootstrap/js/bootstrap.min.js');
-   wp_enqueue_script ( 'jquery-masonry');
-   wp_enqueue_script ( 'masonry-init' , get_stylesheet_directory_uri() . '/js/masonry-init.js', array('jquery-masonry'), '1', true );
+  wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Changa+One|Crimson+Text:400,700|Open+Sans:400,700', false );
+  wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+  //   wp_enqueue_style('bootstrap-css',get_stylesheet_directory_uri().'/bootstrap/css/bootstrap.min.css');
+  //   wp_enqueue_script('bootstrap-js',get_stylesheet_directory_uri().'/bootstrap/js/bootstrap.min.js');
+  wp_enqueue_script( 'scrollaction',get_stylesheet_directory_uri().'/js/scrollaction.js');
+  wp_enqueue_script( 'masonry-init' , get_stylesheet_directory_uri() . '/js/masonry-init.js', array('jquery-masonry'), '1', true );
 }
 
 /*  2.0 CREATE CLASS TAXONOMY FOR PAGES
