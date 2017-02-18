@@ -3,7 +3,7 @@
  * Additional Functions
  *
  * Designed by Sarah Maris for CupsandCakesRumson.com based on TwentySeventeen theme
- * revised  2/12/2017
+ * revised  2/17/2017
  *
  **/
 
@@ -14,6 +14,8 @@
  *  2.0 - Create Class Taxonomy for pages
  *
  *  3.0 - Customize comment output
+ *
+ *  4.0 - Customize footer widgets
  *
  */
 
@@ -115,17 +117,19 @@ function cups_comments($comment, $args, $depth){
          <?php
 }
 
+/*  4.0 CUSTOMIZE FOOTER WIDGETS
+ * --------------------------------------------------*/
 function cups_remove_footer_widgets(){
 
 // Unregister twentyseventeen footer widgets
-  nregister_sidebar( 'sidebar-2' );
+  unregister_sidebar( 'sidebar-2' );
   unregister_sidebar( 'sidebar-3' );
 }
-//add_action( 'widgets_init', 'cups_remove_footer_widgets', 11 );
+
+add_action( 'widgets_init', 'cups_remove_footer_widgets', 11 );
 
 
-  function cups_add_footer_widget() {
-
+function cups_add_footer_widget() {
 
     register_sidebar( array(
       'name'          => __( 'Footer 1 (left)', 'twentyseventeen' ),
@@ -146,7 +150,7 @@ function cups_remove_footer_widgets(){
       'before_title'  => '<h2 class="widget-title">',
       'after_title'   => '</h2>',
     ) );
-    
+
   register_sidebar( array(
     'name'          => __( 'Footer 3 (right)', 'twentyseventeen' ),
     'id'            => 'right-footer-widget',
@@ -155,8 +159,8 @@ function cups_remove_footer_widgets(){
     'after_widget'  => '</section>',
     'before_title'  => '<h2 class="widget-title">',
     'after_title'   => '</h2>',
-  ) );      
-         
+  ) );
+
 }
 
 add_action( 'widgets_init', 'cups_add_footer_widget' );
