@@ -30,6 +30,7 @@ function enqueue_parent_styles() {
   //   wp_enqueue_script('bootstrap-js',get_stylesheet_directory_uri().'/bootstrap/js/bootstrap.min.js');
   wp_enqueue_script( 'scrollaction',get_stylesheet_directory_uri().'/js/scrollaction.js');
   wp_enqueue_script( 'masonry-init' , get_stylesheet_directory_uri() . '/js/masonry-init.js', array('jquery-masonry'), '1', true );
+  wp_enqueue_style('font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css');
 }
 
 /*  2.0 CREATE CLASS TAXONOMY FOR PAGES
@@ -113,3 +114,49 @@ function cups_comments($comment, $args, $depth){
          </article><!-- .comment-body -->
          <?php
 }
+
+function cups_remove_footer_widgets(){
+
+// Unregister twentyseventeen footer widgets
+  nregister_sidebar( 'sidebar-2' );
+  unregister_sidebar( 'sidebar-3' );
+}
+//add_action( 'widgets_init', 'cups_remove_footer_widgets', 11 );
+
+
+  function cups_add_footer_widget() {
+
+
+    register_sidebar( array(
+      'name'          => __( 'Footer 1 (left)', 'twentyseventeen' ),
+      'id'            => 'left-footer-widget',
+      'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+      'before_widget' => '<section id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+    ) );
+
+    register_sidebar( array(
+      'name'          => __( 'Footer 2 (center)', 'twentyseventeen' ),
+      'id'            => 'center-footer-widget',
+      'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+      'before_widget' => '<section id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+    ) );
+    
+  register_sidebar( array(
+    'name'          => __( 'Footer 3 (right)', 'twentyseventeen' ),
+    'id'            => 'right-footer-widget',
+    'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );      
+         
+}
+
+add_action( 'widgets_init', 'cups_add_footer_widget' );

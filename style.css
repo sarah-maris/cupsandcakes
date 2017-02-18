@@ -2,8 +2,8 @@
   Theme Name: Cups and Cakes 2017
   Description: Revised theme for Cups and Cakes website by Sarah Maris 2017
   Template: twentyseventeen
-  Version: 1.0
-  Cups and Cakes Revised: 1/12/2017
+  Version: 1.3
+  Cups and Cakes Revised: 2/17/2017
 
 --*/
 
@@ -42,6 +42,16 @@
  *  6.0 - Home page flexbox
  *   .1 - create grid
  *   .2 - remove border
+ *
+ *  7.0 - Other pages
+ *
+ *  8.0 - Footer
+ *   .1 - set flex display
+ *   .2`- background and font color
+ *   .3 - remove box shadow and borders
+ *   .4 - cup icon list
+ +   .5 - misc. adjustments
+ *
  *
  * 11.0 - Media Queries
  *   .1 - > 320px
@@ -156,17 +166,18 @@ body {
 /* 3.0 Other pages
  *----------------------------*/
 
-/* 3.1 Remove entry header on home page */
+/* 3.1 Remove entry header on home page
 .home .entry-header {
   display: none;
 }
-
+*/
 .site.cupscakes .entry-header {
   margin: 0;
 }
 
 /* 3.2 Page title header */
 body.page:not(.twentyseventeen-front-page) .entry-title,
+.page .panel-content .entry-title,
 .entry-content h1 {
   line-height: 175%;
   font-size: 60px;
@@ -322,7 +333,90 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
   line-height: 1.25;
 }
 
+/* 7.0 Other pages
+ *----------------------------*/
 
+/* 8.0 Footer
+ *----------------------------*/
+
+/* 8.1 set flex display */
+.widget-area {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-footer .widget-column.footer-widget-1,
+.site-footer .widget-column.footer-widget-2 {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.footer-widget-3 {
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* 8.2 background and font colors */
+.site-footer {
+  background-color: #581e00;
+  color: #9bcd5f;
+}
+
+.site-footer h2 {
+    color: #9bcd5f;
+}
+
+.site-footer .widget a:hover,
+.site-footer .widget a:active {
+  color: #9bcd5f;
+  box-shadow: none;
+}
+
+.site-footer .social-navigation a {
+  background-color:  #9bcd5f;
+  color: #581e00;
+}
+
+.site-footer button,
+.site-footer input[type="button"],
+.site-footer input[type="submit"] {
+  background-color: #9bcd5f;
+}
+
+/* 8.3 remove box shadow and borders */
+.site-footer p,
+.site-footer .widget-area ul li a {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+}
+
+.site-footer .widget-area ul li {
+  border: none;
+}
+
+/* 8.4 cup icon list */
+.widget_recent_entries  li {
+  margin-left: 25px;
+}
+
+.widget_recent_entries  li:before {
+  font-family: 'FontAwesome';
+  content: '\f0f4';
+  margin:0 5px 0 -25px;
+}
+
+/* 8.5 msic adjustments */
+.cups-winner {
+  max-width: 100%;
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+h2.widget-title {
+  margin-bottom: 1em;
+}
 
 /* TODO: FIX POST PAGES *?
 /* 9.0 Post Pages
@@ -406,6 +500,11 @@ font-size: 80px;
     max-width: 1000px;
   }
 
+  .site-footer .social-navigation,
+  .site-footer .site-info {
+    width: 45%;
+  }
+
 }
 
 @media screen and (min-width: 55em) { /* 880px */
@@ -421,11 +520,18 @@ font-size: 80px;
 }
 
 @media screen and (min-width: 67em) { /* 1072px */
-  .hide-social {
-    display: block;
+
+  .site-footer .widget-column.footer-widget-1,
+  .site-footer .widget-column.footer-widget-2 {
+    width: 25%;
+    padding: 0 20px;
   }
 
-}
+  .footer-widget-3 {
+    width: 50%;
+    padding: 0 20px;
+  }
+
 
 @media screen and (min-width: 79em) { /* 1264px */
 
@@ -437,9 +543,16 @@ font-size: 80px;
     max-width: 1200px;
     padding: 0;
   }
+
 }
 
+@media screen and (min-width: 100em) { /* 1600px */
 
+  .hide-social {
+    display: block;
+  }
+
+}
 
 
 /* colors
