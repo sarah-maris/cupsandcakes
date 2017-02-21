@@ -3,7 +3,7 @@
   Description: Revised theme for Cups and Cakes website by Sarah Maris 2017
   Template: twentyseventeen
   Version: 1.3
-  Cups and Cakes Revised: 2/17/2017
+  Cups and Cakes Revised: 2/21/2017
 
 --*/
 
@@ -38,7 +38,6 @@
  *   .1 - create box for post
  *   .2 - content styling
  *
- *
  *  6.0 - Home page flexbox
  *   .1 - create grid
  *   .2 - remove border
@@ -52,6 +51,10 @@
  *   .4 - cup icon list
  +   .5 - misc. adjustments
  *
+ *  9.0 - Comment carousel
+ *   .1 - layout
+ *   .2 - nav arrows
+ *   .3 - nav arrow hover state
  *
  * 11.0 - Media Queries
  *   .1 - > 320px
@@ -418,8 +421,47 @@ h2.widget-title {
   margin-bottom: 1em;
 }
 
+/* 9.0 Comment Carousel
+ *----------------------------*/
+
+/* 9.1 layout basics */
+.owl-carousel{
+  width: 100%;
+  padding: 35px;
+}
+
+/* 9.2 nav arrows */
+.owl-carousel .owl-nav div {
+  position: absolute;
+  top: 50%;
+  background: rgba(155, 205, 95, 0.3);
+  color: #fff;
+  padding: 10px;
+  margin-top: -20px;
+  font-size: 20px;
+}
+
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-nav .owl-prev {
+  display: none;
+}
+
+/* 9.3 nav arrow hover state */
+.owl-carousel:hover .owl-nav .owl-prev {
+  display: block;
+  left: -5px;
+  right: auto;
+}
+.owl-carousel:hover .owl-nav .owl-next {
+  display: block;
+  right: -5px;
+  left: auto;
+}
+
+
+
 /* TODO: FIX POST PAGES *?
-/* 9.0 Post Pages
+/* 10.0 Post Pages
  *----------------------------*/
 
 /* 9.1 Center image in  post */
@@ -468,7 +510,7 @@ font-size: 80px;
 }
 
 
-/* 9.0 Media Queries
+/* 11.0 Media Queries
  *----------------------------*/
 
 @media screen and (min-width: 20em) { /* 320px */
@@ -559,10 +601,10 @@ font-size: 80px;
 
 Logo colors
   mid green(&): #c7de8e
-  dark green(tea cup): #9bcd5f
+  dark green(tea cup): #9bcd5f rgb(155,205,95)
   blue (cupcake wrapper): #5162ac;
   dark blue (pedestal):1D1160
-  dark brown (text): #581e00
+  dark brown (text): #581e00  rgb(88,30,0)
 
 Other colors: <-- not used
   very light green: #e4efc9 #f5faef

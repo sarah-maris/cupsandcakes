@@ -3,7 +3,7 @@
  * Additional Functions
  *
  * Designed by Sarah Maris for CupsandCakesRumson.com based on TwentySeventeen theme
- * revised  2/17/2017
+ * revised  2/21/2017
  *
  **/
 
@@ -17,6 +17,8 @@
  *
  *  4.0 - Customize footer widgets
  *
+ *  5.0 - Comments carousel shortcode
+ *
  */
 
 
@@ -28,9 +30,12 @@ add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 function enqueue_parent_styles() {
   wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Changa+One|Crimson+Text:400,700|Open+Sans:400,700', false );
   wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+  wp_enqueue_style( 'owl-style', get_stylesheet_directory_uri().'/css/owl.carousel.css' );
   //   wp_enqueue_style('bootstrap-css',get_stylesheet_directory_uri().'/bootstrap/css/bootstrap.min.css');
   //   wp_enqueue_script('bootstrap-js',get_stylesheet_directory_uri().'/bootstrap/js/bootstrap.min.js');
   wp_enqueue_script( 'scrollaction',get_stylesheet_directory_uri().'/js/scrollaction.js');
+  wp_enqueue_script( 'owl',get_stylesheet_directory_uri().'/js/owl-action.js');
+  wp_enqueue_script( 'owl-carousel',get_stylesheet_directory_uri().'/js/owl.carousel.min.js');
   wp_enqueue_script( 'masonry-init' , get_stylesheet_directory_uri() . '/js/masonry-init.js', array('jquery-masonry'), '1', true );
   wp_enqueue_style('font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css');
 }
@@ -131,25 +136,25 @@ add_action( 'widgets_init', 'cups_remove_footer_widgets', 11 );
 
 function cups_add_footer_widget() {
 
-    register_sidebar( array(
-      'name'          => __( 'Footer 1 (left)', 'twentyseventeen' ),
-      'id'            => 'left-footer-widget',
-      'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
-      'before_widget' => '<section id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</section>',
-      'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
-    ) );
+  register_sidebar( array(
+    'name'          => __( 'Footer 1 (left)', 'twentyseventeen' ),
+    'id'            => 'left-footer-widget',
+    'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
 
-    register_sidebar( array(
-      'name'          => __( 'Footer 2 (center)', 'twentyseventeen' ),
-      'id'            => 'center-footer-widget',
-      'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
-      'before_widget' => '<section id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</section>',
-      'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
-    ) );
+  register_sidebar( array(
+    'name'          => __( 'Footer 2 (center)', 'twentyseventeen' ),
+    'id'            => 'center-footer-widget',
+    'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
 
   register_sidebar( array(
     'name'          => __( 'Footer 3 (right)', 'twentyseventeen' ),
@@ -164,3 +169,43 @@ function cups_add_footer_widget() {
 }
 
 add_action( 'widgets_init', 'cups_add_footer_widget' );
+
+
+/*  %.0 COMMENTS CAROUSEL SHORTCODE
+ * --------------------------------------------------*/
+
+function comments_carousel_shortcode( $atts ) {
+
+    // Attributes
+  $atts = shortcode_atts(
+    array(
+      'postID' => ''
+    ),
+    $atts,
+    'comments-carousel'
+  );
+
+     $output = '<div id="owl-comments-caro" class="owl-carousel owl-theme">';
+     // echo $output;
+         $comments = get_comments('post_id=' . postID);
+   // $comments = get_comments('post_id=1218');
+    $d = "F j, Y";
+    $d = "F j, Y";
+      foreach($comments as $comment) :
+        $id =  $comment->comment_ID;
+        $comment_date = get_comment_date( $d, $id );
+        $comment_text = get_comment_text($id);
+        $output .= '<div class="item">' .
+            '<h2 class="cups-comment-date">' .$comment_date .'</h2>' .
+            '<p class="cups-comment">' . $comment_text .'</p>' .
+          '</div>';
+      endforeach;
+     $output .= '</ul>';
+
+  // Return code
+  return $output;
+
+}
+add_shortcode( 'comments-carousel', 'comments_carousel_shortcode' );
+
+?>
