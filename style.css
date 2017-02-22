@@ -1,12 +1,11 @@
-/*--
+/*
   Theme Name: Cups and Cakes 2017
   Description: Revised theme for Cups and Cakes website by Sarah Maris 2017
   Template: twentyseventeen
   Version: 1.4
   Cups and Cakes Revised: 2/22/2017
 
---*/
-
+*/
 
 /*
  * TABLE OF CONTENTS
@@ -69,9 +68,8 @@
  *
  */
 
-
 /* 1.0 Site basics
- *----------------------------*/
+ *---------------------------- */
 
 /* 1.1 Font sizes */
 
@@ -81,13 +79,13 @@ html {
 
 body {
   color: #581e00;
-  font:  14px/21px 'Open Sans', sans-serif;
-  margin:0;
+  font: 14px/21px 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 .cupscakes h2 {
   color: #9bcd5f;
-  font: 22px/22px 'Changa One',  Arial, sans-serif;
+  font: 22px/22px 'Changa One', Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -113,7 +111,7 @@ body {
 }
 
 /* 2.0 Header
- *----------------------------*/
+ *---------------------------- */
 
 /* 2.1 Site description and logo */
 .site-description {
@@ -171,10 +169,8 @@ body {
   display: none;
 }
 
-
-
 /* 3.0 Other pages
- *----------------------------*/
+ *---------------------------- */
 
 /* 3.1 Remove entry header on home page
 .home .entry-header {
@@ -189,73 +185,70 @@ body {
 body.page:not(.twentyseventeen-front-page) .entry-title,
 .page .panel-content .entry-title,
 .entry-content h1 {
-  line-height: 175%;
-  font-size: 60px;
   letter-spacing: normal;
-  font: normal 45px/45px Crimson Text;  color:#581e00;
+  font: normal 45px/45px 'Crimson Text', serif;
+  color: #581e00;
   text-transform: none;
 }
 
-/* 3.2 Page section colors*/
-
+/* 3.2 Page section colors */
 
 /* 3.3 Border images (to create lines between sections) */
-.breakfast{
+.breakfast {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/coffee.gif");
   background-repeat: repeat-x;
   width: 100%;
-  margin :30px 0;
+  margin: 30px 0;
 }
 
-.celebrations{
+.celebrations {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/gift-pink.gif");
   background-repeat: repeat-x;
   width: 100%;
-  margin :30px 0;
+  margin: 30px 0;
 }
 
-.desserts{
+.desserts {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/star.gif");
   background-repeat: repeat-x;
   width: 100%;
-  margin :30px 0;
+  margin: 30px 0;
 }
 
-.gift-baskets{
+.gift-baskets {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/gift.gif");
   background-repeat: repeat-x;
   width: 100%;
-  margin :30px 0;
+  margin: 30px 0;
 }
 
-.juice-bar{
+.juice-bar {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/apple.gif");
   background-repeat: repeat-x;
   width: 100%;
-  margin :30px 0;
+  margin: 30px 0;
 }
 
-.smoothies{
+.smoothies {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/citrus.gif");
   background-repeat: repeat-x;
   width: 100%;
-  margin :30px 0;
+  margin: 30px 0;
 }
 
-.cleanse{
+.cleanse {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/stem.gif");
   background-repeat: repeat-x;
   width: 100%;
-  margin :30px 0;
+  margin: 30px 0;
 }
 
 .cupscakes {
   background-color: green;
 }
 
-
 /* 4.0 Customer Comments
- *----------------------------*/
+ *---------------------------- */
 
 /* 4.1 Remove number of comments and author from "Comments" page */
 .page-comments .comments-title,
@@ -276,48 +269,47 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 
 /* 4.4 Move "Reply" arrow to the right */
 .page-comments .reply {
-  /*float: right; */
+  /* float: right; */
 }
 
-
 /* 5.0 News Page
- *----------------------------*/
+*---------------------------- */
 
 /* 5.1 Create box around post */
-.page-template-page-posts  .post {
+.page-template-page-posts .post {
   background: #f5faef;
   border: 2px solid #581e00;
   border-radius: 5px;
   width: 100%;
   margin: 5px 0 5px 10px;
   padding: 15px;
-  font-size: 0px; /* hide non-working instagram links */
+  font-size: 0; /* hide non-working instagram links */
 }
 
 /* 5.2 Content styling */
-.cups-masonry-container img{
+.cups-masonry-container img {
   width: 100%;
 }
 
-.cups-masonry-container time{
+.cups-masonry-container time {
   color: #581e00;
 }
 
 .cups-masonry-container .edit-link {
-  display:none;
+  display: none;
 }
 
 .cups-masonry-container .entry-title a {
- font-size: 36px;
- line-height: 1;
+  font-size: 36px;
+  line-height: 1;
 }
 
 /* 6.0 Home Page
- *----------------------------*/
+ *---------------------------- */
 
 /* 6.1 Create flexbox grid */
 .home-grid {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -328,25 +320,28 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 
 /* 6.2 remove top border */
 .twentyseventeen-front-page article.home-box,
-.twentyseventeen-front-page article:not(.has-post-thumbnail):not(:first-child){
-    border-top: none;
+.twentyseventeen-front-page article:not(.has-post-thumbnail):not(:first-child) {
+  border-top: none;
 }
 
 /* 6.3 colored panel */
 .cupsgreen {
   background-color: rgba(155,205,95, 0.3);
 }
-.cupsgreen .entry-content a img, .widget a img {
+
+.cupsgreen .entry-content a img,
+.widget a img {
   box-shadow: none;
 }
+
 .panel-hide-title .entry-title {
   display: none;
 }
 
 .cupsgreen .wrap {
   padding: 2em;
-  
 }
+
 .comments-box {
   padding-top: 20px;
   background-color: #fff;
@@ -368,9 +363,9 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 /* 7.0 Other pages
- *----------------------------*/
+ *---------------------------- */
 .cups-flex {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -381,7 +376,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 /* 8.0 Footer
- *----------------------------*/
+ *---------------------------- */
 
 /* 8.1 set flex display */
 .widget-area {
@@ -420,7 +415,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 .site-footer .social-navigation a {
-  background-color:  #9bcd5f;
+  background-color: #9bcd5f;
   color: #581e00;
 }
 
@@ -443,14 +438,14 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 /* 8.4 cup icon list */
-.widget_recent_entries  li {
+.widget_recent_entries li {
   margin-left: 25px;
 }
 
-.widget_recent_entries  li:before {
+.widget_recent_entries li::before {
   content: '\f0f4';
   font-family: 'FontAwesome';
-  margin:0 5px 0 -25px;
+  margin: 0 5px 0 -25px;
 }
 
 /* 8.5 misc adjustments */
@@ -466,10 +461,10 @@ h2.widget-title {
 }
 
 /* 9.0 Comment Carousel
- *----------------------------*/
+ *---------------------------- */
 
 /* 9.1 layout basics */
-.owl-carousel{
+.owl-carousel {
   width: 100%;
   padding: 20px 35px;
 }
@@ -503,10 +498,9 @@ h2.widget-title {
 }
 
 
-
 /* TODO: FIX POST PAGES *?
 /* 10.0 Post Pages
- *----------------------------*/
+ *---------------------------- */
 
 /* 9.1 Center image in  post */
 .cupscakes_single .post_content div {
@@ -518,7 +512,7 @@ h2.widget-title {
   margin-right: auto;
 }
 
-/* 9.2 Add padding on top of sidebar (to make it even with top of content)*/
+/* 9.2 Add padding on top of sidebar (to make it even with top of content) */
 .cupscakes_sidebar.sidebar {
   padding-top: 40px;
 }
@@ -553,12 +547,12 @@ font-size: 80px;
   margin-bottom: 20px;
 }
 
-
 /* 11.0 Media Queries
- *----------------------------*/
+ *---------------------------- */
 
 @media screen and (min-width: 20em) { /* 320px */
 
+  /*  stuff here? */
 }
 
 @media screen and (min-width: 30em) { /* 480px */
@@ -572,14 +566,11 @@ font-size: 80px;
   }
 }
 
-
 @media screen and (min-width: 42em) { /* 672px */
 
-  .page-template-page-posts  .post {
-    width: 48%
+  .page-template-page-posts .post {
+    width: 48%;
   }
-
-
 }
 
 @media screen and (min-width: 48em) { /* 768px */
@@ -620,7 +611,6 @@ font-size: 80px;
   .social-navigation + .site-info {
     margin-left: 0;
   }
-
 }
 
 @media screen and (min-width: 55em) { /* 880px */
@@ -629,10 +619,9 @@ font-size: 80px;
     padding: 1em;
   }
 
-  .page-template-page-posts  .post {
-   width: 32%
+  .page-template-page-posts .post {
+    width: 32%;
   }
-
 }
 
 @media screen and (min-width: 67em) { /* 1072px */
@@ -647,7 +636,7 @@ font-size: 80px;
     width: 50%;
     padding: 0 20px;
   }
-
+}
 
 @media screen and (min-width: 79em) { /* 1264px */
 
@@ -659,7 +648,6 @@ font-size: 80px;
     max-width: 1200px;
     padding: 0;
   }
-
 }
 
 @media screen and (min-width: 100em) { /* 1600px */
@@ -667,9 +655,7 @@ font-size: 80px;
   .hide-social {
     display: block;
   }
-
 }
-
 
 /* colors
 
