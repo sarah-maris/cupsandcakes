@@ -196,7 +196,7 @@ function comments_carousel_shortcode( $atts ) {
         $comment_date = get_comment_date( $d, $id );
         $comment_text = get_comment_text($id);
         $output .= '<div class="item">' .
-            '<h2 class="cups-comment-date">' .$comment_date .'</h2>' .
+            '<h4 class="cups-comment-date">' .$comment_date .'</h4>' .
             '<p class="cups-comment">' . $comment_text .'</p>' .
           '</div>';
       endforeach;
