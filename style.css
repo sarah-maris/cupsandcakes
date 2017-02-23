@@ -44,6 +44,7 @@
  *   .4 - adjust spacing
  *
  *  7.0 - Other pages
+ *   .1 single post image
  *
  *  8.0 - Footer
  *   .1 - set flex display
@@ -326,7 +327,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 
 /* 6.3 colored panel */
 .cupsgreen {
-  background-color: rgba(155,205,95, 0.3);
+  background-color: rgba(155, 205, 95, 0.3);
 }
 
 .cupsgreen .entry-content a img,
@@ -364,6 +365,12 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 
 /* 7.0 Other pages
  *---------------------------- */
+
+/* 7.1 single post image */
+.single-post .entry-content img {
+  width: 100%;
+}
+
 .cups-flex {
   display: flex;
   flex-wrap: wrap;
@@ -491,12 +498,12 @@ h2.widget-title {
   left: -5px;
   right: auto;
 }
+
 .owl-carousel:hover .owl-nav .owl-next {
   display: block;
   left: auto;
   right: -5px;
 }
-
 
 /* TODO: FIX POST PAGES *?
 /* 10.0 Post Pages
@@ -507,7 +514,7 @@ h2.widget-title {
   text-align: center;
 }
 
-.cupscakes_single  .post_content img {
+.cupscakes_single .post_content img {
   margin-left: auto;
   margin-right: auto;
 }
@@ -517,26 +524,10 @@ h2.widget-title {
   padding-top: 40px;
 }
 
-
 /* May be needed for pages */
 body.page-template-page-full-width #primary .entry-header .entry-title {
-font-size: 3rem;
-font-size: 48px;
-}
-
-@media screen and (min-width: 48em) {
-body.page-template-page-full-width #primary .page-full-width .entry-content {
-width: 100%;
-}
-
-body.page-template-page-full-width #primary .page-full-width .entry-header {
-width: 100%;
-}
-
-body.page-template-page-full-width #primary .entry-header .entry-title {
-font-size: 5rem;
-font-size: 80px;
-}
+  font-size: 3rem;
+  font-size: 48px;
 }
 
 .spacer {
@@ -579,6 +570,29 @@ font-size: 80px;
   .archive.page-one-column:not(.has-sidebar) .page-header,
   .archive.page-one-column:not(.has-sidebar) #primary {
     max-width: 1000px;
+  }
+
+  body.single-post .page-full-width #primary {
+    float: none;
+    margin: auto;
+    max-width: 800px;
+  }
+
+  body.page-template-page-full-width #primary .page-full-width .entry-content,
+  body.page-template-page-full-width #primary .page-full-width .entry-header,
+  body.single-post .page-full-width #primary {
+    width: 100%;
+  }
+
+  body.single-post .page-full-width .entry-content,
+  body.single-post .page-full-width .entry-header {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  body.page-template-page-full-width #primary .entry-header .entry-title {
+    font-size: 5rem;
+    font-size: 80px;
   }
 
   .site-footer .social-navigation,
@@ -654,6 +668,13 @@ font-size: 80px;
 
   .hide-social {
     display: block;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .eds-scroll-hidden,
+  .edsanimate-sis-hidden {
+    opacity: 1;
   }
 }
 
