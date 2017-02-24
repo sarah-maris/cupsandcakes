@@ -148,6 +148,7 @@ body {
   right: 0;
   top: 20px;
   text-align: right;
+  width: 50%;
 }
 
 /* 2.4 Hours */
@@ -165,7 +166,7 @@ body {
 }
 
 /* 2.6 Hide/move on scroll */
-.hide-social,
+.header-social.hide-social,
 .hide-hours {
   display: none;
 }
@@ -198,50 +199,57 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 .breakfast {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/coffee.gif");
   background-repeat: repeat-x;
-  width: 100%;
+  height: 20px;
   margin: 30px 0;
+  width: 100%;
 }
 
 .celebrations {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/gift-pink.gif");
   background-repeat: repeat-x;
-  width: 100%;
+  height: 20px;
   margin: 30px 0;
+  width: 100%;
 }
 
 .desserts {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/star.gif");
   background-repeat: repeat-x;
-  width: 100%;
+  height: 20px;
   margin: 30px 0;
+  width: 100%;
 }
 
 .gift-baskets {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/gift.gif");
   background-repeat: repeat-x;
-  width: 100%;
+  height: 20px;
   margin: 30px 0;
+  width: 100%;
 }
 
 .juice-bar {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/apple.gif");
   background-repeat: repeat-x;
-  width: 100%;
+  height: 20px;
   margin: 30px 0;
+  width: 100%;
 }
 
 .smoothies {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/citrus.gif");
   background-repeat: repeat-x;
-  width: 100%;
+  height: 20px;
   margin: 30px 0;
+  width: 100%;
 }
 
 .cleanse {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/stem.gif");
   background-repeat: repeat-x;
-  width: 100%;
+  height: 20px;
   margin: 30px 0;
+  width: 100%;
 }
 
 .cupscakes {
@@ -377,9 +385,28 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 .cups-two-thirds,
-.cups-one-third,
-.cups-half {
+.cups-one-third {
   width: 100%;
+}
+
+.cups-half,
+.cups-one-fourth {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cups-half {
+  padding: 20px;
+}
+
+.cups-one-fourth img {
+  display: none;
+}
+
+.cups-one-fourth img:first-child {
+  display: block;
 }
 
 /* 8.0 Footer
@@ -543,7 +570,9 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
 
 @media screen and (min-width: 20em) { /* 320px */
 
-  /*  stuff here? */
+  .header-social {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 30em) { /* 480px */
@@ -558,6 +587,10 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
 }
 
 @media screen and (min-width: 42em) { /* 672px */
+
+  .header-social {
+    display: block;
+  }
 
   .page-template-page-posts .post {
     width: 48%;
@@ -595,6 +628,10 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
     font-size: 80px;
   }
 
+  .navigation-top nav {
+    margin-left: -2em;
+  }
+
   .site-footer .social-navigation,
   .site-footer .site-info {
     width: 50%;
@@ -616,6 +653,14 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
     width: 50%;
   }
 
+  .cups-one-fourth {
+    width: 25%;
+  }
+
+  .cups-one-fourth img {
+    display: block;
+  }
+
   .site-footer .widget-column.footer-widget-1,
   .site-footer .widget-column.footer-widget-2 {
     width: 50%;
@@ -628,6 +673,10 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
 }
 
 @media screen and (min-width: 55em) { /* 880px */
+
+  .navigation-top nav {
+    margin-left: -1.25em;
+  }
 
   .navigation-top a {
     padding: 1em;
