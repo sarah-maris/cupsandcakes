@@ -22,10 +22,12 @@
  *   .6 - hide on scroll
  *
  *  3.0 - Pages
- *   .1 - hide home page header
- *   .2 - page title header
- *   .3 - page section colors
- *   .4 - border images
+ *   .1 - flex box classes
+ *   .2 - single post image
+ *   .3 - ul indent
+ *   .4 - entry header-social
+ *   .5 - page title header
+ *   .6 - border images
  *
  *  4.0 - Comments
  *   .1 - remove comment author and number of comments
@@ -44,7 +46,6 @@
  *   .4 - adjust spacing
  *
  *  7.0 - Other pages
- *   .1 single post image
  *
  *  8.0 - Footer
  *   .1 - set flex display
@@ -174,16 +175,58 @@ body {
 /* 3.0 Other pages
  *---------------------------- */
 
+/* 3.1 flexbox classes */
+.cups-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cups-two-thirds,
+.cups-one-third {
+  width: 100%;
+}
+
+.cups-half,
+.cups-one-fourth {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cups-half {
+  padding: 20px;
+}
+
+.cups-one-fourth img {
+  display: none;
+}
+
+.cups-one-fourth img:first-child {
+  display: block;
+}
+
+/* 3.2 single post image */
+.single-post .entry-content img {
+  width: 100%;
+}
+
+/* 3.3 ul indent */
+.cups-indent {
+  padding-left: 20px;
+}
+
 /* 3.1 Remove entry header on home page
 .home .entry-header {
   display: none;
 }
-*/
+
+/* 3.4 entry header */
 .site.cupscakes .entry-header {
   margin: 0;
 }
 
-/* 3.2 Page title header */
+/* 3.5 page title header */
 body.page:not(.twentyseventeen-front-page) .entry-title,
 .page .panel-content .entry-title,
 .entry-content h1 {
@@ -193,9 +236,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
   text-transform: none;
 }
 
-/* 3.2 Page section colors */
-
-/* 3.3 Border images (to create lines between sections) */
+/* 3.6 border images (to create lines between sections) */
 .breakfast {
   background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/coffee.gif");
   background-repeat: repeat-x;
@@ -250,10 +291,6 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
   height: 20px;
   margin: 30px 0;
   width: 100%;
-}
-
-.cupscakes {
-  background-color: green;
 }
 
 /* 4.0 Customer Comments
@@ -373,41 +410,6 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 
 /* 7.0 Other pages
  *---------------------------- */
-
-/* 7.1 single post image */
-.single-post .entry-content img {
-  width: 100%;
-}
-
-.cups-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.cups-two-thirds,
-.cups-one-third {
-  width: 100%;
-}
-
-.cups-half,
-.cups-one-fourth {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.cups-half {
-  padding: 20px;
-}
-
-.cups-one-fourth img {
-  display: none;
-}
-
-.cups-one-fourth img:first-child {
-  display: block;
-}
 
 /* 8.0 Footer
  *---------------------------- */
