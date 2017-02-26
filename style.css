@@ -660,7 +660,7 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
   }
 
   .cups-half {
-    width: 50%;
+    width: 50%; /* 46% on live site - check */
   }
 
   .cups-one-fourth {
