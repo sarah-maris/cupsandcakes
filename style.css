@@ -206,6 +206,10 @@ body {
   display: block;
 }
 
+.cups-top {
+  justify-content: flex-start;
+}
+
 /* 3.2 single post image */
 .single-post .entry-content img {
   width: 100%;
