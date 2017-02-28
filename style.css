@@ -28,6 +28,8 @@
  *   .4 - entry header-social
  *   .5 - page title header
  *   .6 - border images
+ *   .7 - margin for inner header
+ *   ,8 - party page images
  *
  *  4.0 - Comments
  *   .1 - remove comment author and number of comments
@@ -299,9 +301,18 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
   width: 100%;
 }
 
-/* 3.7 border images (to create lines between sections) */
+/* 3.7 margin for inner header */
 .cups-half h2 {
   margin: 0;
+}
+
+/* 3.8 party page images */
+.cups-party img {
+  margin: 10px;
+}
+
+.cups-party {
+  justify-content: flex-start;
 }
 
 /* 4.0 Customer Comments
@@ -720,6 +731,10 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
   .footer-widget-3 {
     width: 50%;
     padding: 0 20px;
+  }
+
+  .cups-party {
+    justify-content: space-between;
   }
 }
 
