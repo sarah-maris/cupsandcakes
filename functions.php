@@ -3,7 +3,7 @@
  * Additional Functions
  *
  * Designed by Sarah Maris for CupsandCakesRumson.com based on TwentySeventeen theme
- * revised  2/21/2017
+ * revised  2/28/2017
  *
  **/
 
@@ -31,8 +31,6 @@ function enqueue_parent_styles() {
   wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Changa+One|Crimson+Text:400,700|Open+Sans:400,700', false );
   wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
   wp_enqueue_style( 'owl-style', get_stylesheet_directory_uri().'/css/owl.carousel.css' );
-  //   wp_enqueue_style('bootstrap-css',get_stylesheet_directory_uri().'/bootstrap/css/bootstrap.min.css');
-  //   wp_enqueue_script('bootstrap-js',get_stylesheet_directory_uri().'/bootstrap/js/bootstrap.min.js');
   wp_enqueue_script( 'scrollaction',get_stylesheet_directory_uri().'/js/scrollaction.js');
   wp_enqueue_script( 'owl',get_stylesheet_directory_uri().'/js/owl-action.js');
   wp_enqueue_script( 'owl-carousel',get_stylesheet_directory_uri().'/js/owl.carousel.min.js');
@@ -171,7 +169,7 @@ function cups_add_footer_widget() {
 add_action( 'widgets_init', 'cups_add_footer_widget' );
 
 
-/*  %.0 COMMENTS CAROUSEL SHORTCODE
+/*  5.0 COMMENTS CAROUSEL SHORTCODE
  * --------------------------------------------------*/
 
 function comments_carousel_shortcode( $atts ) {
