@@ -54,7 +54,8 @@
  *   .2`- background and font color
  *   .3 - remove box shadow and borders
  *   .4 - cup icon list
- +   .5 - misc. adjustments
+ +   .5 - contact links
+ *   .6 - misc. adjustments
  *
  *  9.0 - Comment carousel
  *   .1 - layout
@@ -144,11 +145,6 @@ body.has-header-video .site-title a {
   color: #fff;
 }
 
-.site-footer .widget-area .contact-link {
-  box-shadow: none;
-  line-height: 1.75;
-}
-
 .site-description .contact-link:hover,
 .site-footer .contact-link:hover {
   color: #9bcd5f;
@@ -190,6 +186,7 @@ body.has-header-video .site-title a {
 /* 2.4 Hours */
 .cupscakes-hours {
   color: #9bcd5f;
+  display: none;
   position: fixed;
   right: 10px;
   top: 75px;
@@ -533,6 +530,25 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
   margin: 0 5px 0 -25px;
 }
 
+/* 8.5 contact links */
+.site-footer .widget-area .contact-link {
+  box-shadow: none;
+  line-height: 1.75;
+  margin-left: 25px
+}
+
+.cups-phone::before {
+  content: '\f095';
+  font-family: 'FontAwesome';
+  margin: 0 10px 0 -25px;
+}
+
+.cups-email::before {
+  content: '\f0e0';
+  font-family: 'FontAwesome';
+  margin: 0 10px 0 -25px;
+}
+
 /* 8.5 misc adjustments */
 .cups-winner {
   display: block;
@@ -634,6 +650,14 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
 
   .twentyseventeen-front-page article.home-box {
     width: 50%;
+  }
+  
+  .cupscakes-hours {
+    display: block;
+  }
+  
+  .cupscakes-hours.hide-hours {
+    display: none;
   }
 }
 
