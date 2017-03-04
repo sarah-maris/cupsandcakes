@@ -2,7 +2,7 @@
   Theme Name: Cups and Cakes 2017
   Description: Revised theme for Cups and Cakes website by Sarah Maris 2017
   Template: twentyseventeen
-  Version: 2.0
+  Version: 2.1
   Cups and Cakes Revised: 2/28/2017
 
 */
@@ -125,8 +125,34 @@ body {
  *---------------------------- */
 
 /* 2.1 Site description and logo */
+.site-title a {
+  display:none;
+}
+
+.header-image .site-title a,
+body.has-header-video .site-title a {
+    color: #fff;
+    font-family: 'Crimson Text', serif;
+}
+
 .site-description {
   font: 22px/28px 'Crimson Text', serif;
+}
+
+.site-description a,
+.site-footer .contact-link {
+  color: #fff;
+}
+
+.site-footer .widget-area .contact-link {
+  box-shadow: none;
+  line-height: 1.75;
+}
+
+.site-description .contact-link:hover,
+.site-footer .contact-link:hover {
+  color: #9bcd5f;
+  opacity: 1;
 }
 
 .custom-logo-link img {
@@ -643,6 +669,10 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
     float: none;
     margin: auto;
     max-width: 800px;
+  }
+
+  .site-header .menu-scroll-down {
+      right: -30px;
   }
 
   body.page-template-page-full-width #primary .page-full-width .entry-content,
