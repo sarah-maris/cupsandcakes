@@ -2,8 +2,8 @@
   Theme Name: Cups and Cakes 2017
   Description: Revised theme for Cups and Cakes website by Sarah Maris 2017
   Template: twentyseventeen
-  Version: 2.1
-  Cups and Cakes Revised: 2/28/2017
+  Version: 2.3
+  Cups and Cakes Revised: 8/02/2019
 
 */
 
@@ -102,13 +102,13 @@ body {
 
 .cupscakes h3 {
   color: #9bcd5f;
-  font: 22px/22px 'Changa One', Arial, sans-serif;
+  font: 22px/22px 'Jenthill', 'Changa One', Arial, sans-serif;
   text-transform: uppercase;
 }
 
 .cupscakes h4 {
   color: #581e00;
-  font: bold 18px/22px  'Crimson Text', serif;
+  font: bold 18px/22px 'Crimson Text', serif;
 }
 
 .cupscakes a {
@@ -127,13 +127,13 @@ body {
 
 /* 2.1 Site description and logo */
 .site-title a {
-  display:none;
+  display: none;
 }
 
 .header-image .site-title a,
 body.has-header-video .site-title a {
-    color: #fff;
-    font-family: 'Crimson Text', serif;
+  color: #fff;
+  font-family: 'Crimson Text', serif;
 }
 
 .site-description {
@@ -269,7 +269,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 
 /* 3.6 border images (to create lines between sections) */
 .breakfast {
-  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/coffee.gif");
+  background-image: url('http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/coffee.gif');
   background-repeat: repeat-x;
   height: 20px;
   margin: 30px 0;
@@ -277,7 +277,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 .celebrations {
-  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/gift-pink.gif");
+  background-image: url('http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/gift-pink.gif');
   background-repeat: repeat-x;
   height: 20px;
   margin: 30px 0;
@@ -285,7 +285,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 .desserts {
-  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/star.gif");
+  background-image: url('http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/star.gif');
   background-repeat: repeat-x;
   height: 20px;
   margin: 30px 0;
@@ -293,7 +293,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 .gift-baskets {
-  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/gift.gif");
+  background-image: url('http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/gift.gif');
   background-repeat: repeat-x;
   height: 20px;
   margin: 30px 0;
@@ -301,7 +301,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 .juice-bar {
-  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/apple.gif");
+  background-image: url('http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/apple.gif');
   background-repeat: repeat-x;
   height: 20px;
   margin: 30px 0;
@@ -309,7 +309,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 .smoothies {
-  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/citrus.gif");
+  background-image: url('http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/citrus.gif');
   background-repeat: repeat-x;
   height: 20px;
   margin: 30px 0;
@@ -317,7 +317,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 .cleanse {
-  background-image: url("http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/stem.gif");
+  background-image: url('http://cupsandcakesrumson.com/wordpress/wp-content/uploads/2015/03/stem.gif');
   background-repeat: repeat-x;
   height: 20px;
   margin: 30px 0;
@@ -456,6 +456,12 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 /* 7.0 Other pages
  *---------------------------- */
 
+/* 7.1 Empployment form */
+
+.wpcf7-list-item {
+  width: 200px;
+}
+
 /* 8.0 Footer
  *---------------------------- */
 
@@ -502,8 +508,8 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 }
 
 .site-footer button,
-.site-footer input[type="button"],
-.site-footer input[type="submit"] {
+.site-footer input[type='button'],
+.site-footer input[type='submit'] {
   background-color: #9bcd5f;
 }
 
@@ -534,7 +540,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 .site-footer .widget-area .contact-link {
   box-shadow: none;
   line-height: 1.75;
-  margin-left: 25px
+  margin-left: 25px;
 }
 
 .cups-phone::before {
@@ -545,6 +551,25 @@ body.page:not(.twentyseventeen-front-page) .entry-title,
 
 .cups-email::before {
   content: '\f0e0';
+  font-family: 'FontAwesome';
+  margin: 0 10px 0 -25px;
+}
+.site-footer .widget-area .widget_media_image a {
+  box-shadow: none;
+}
+
+.site-footer .widget-area .cups-shop {
+  box-shadow: none;
+  font: 22px/22px 'Changa One', Arial, sans-serif;
+  line-height: 1.75;
+  margin-left: 25px;
+}
+
+.site-footer .widget-area .cups-shop:hover {
+  color: #fff;
+}
+.cups-shop::before {
+  content: '\f07a';
   font-family: 'FontAwesome';
   margin: 0 10px 0 -25px;
 }
@@ -635,14 +660,16 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
 /* 11.0 Media Queries
  *---------------------------- */
 
-@media screen and (min-width: 20em) { /* 320px */
+@media screen and (min-width: 20em) {
+  /* 320px */
 
   .header-social {
     display: none;
   }
 }
 
-@media screen and (min-width: 30em) { /* 480px */
+@media screen and (min-width: 30em) {
+  /* 480px */
 
   .page-one-column .panel-content .wrap {
     max-width: 1000px;
@@ -651,17 +678,18 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
   .twentyseventeen-front-page article.home-box {
     width: 50%;
   }
-  
+
   .cupscakes-hours {
     display: block;
   }
-  
+
   .cupscakes-hours.hide-hours {
     display: none;
   }
 }
 
-@media screen and (min-width: 42em) { /* 672px */
+@media screen and (min-width: 42em) {
+  /* 672px */
 
   .header-social {
     display: block;
@@ -672,9 +700,10 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
   }
 }
 
-@media screen and (min-width: 48em) { /* 768px */
+@media screen and (min-width: 48em) {
+  /* 768px */
 
-   /* adjust content top padding */
+  /* adjust content top padding */
   .site-content {
     padding-top: 2.5em;
   }
@@ -696,7 +725,7 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
   }
 
   .site-header .menu-scroll-down {
-      right: -30px;
+    right: -30px;
   }
 
   body.page-template-page-full-width #primary .page-full-width .entry-content,
@@ -768,7 +797,8 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
   }
 }
 
-@media screen and (min-width: 55em) { /* 880px */
+@media screen and (min-width: 55em) {
+  /* 880px */
 
   .navigation-top nav {
     margin: 0 -2.5em;
@@ -783,7 +813,8 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
   }
 }
 
-@media screen and (min-width: 67em) { /* 1072px */
+@media screen and (min-width: 67em) {
+  /* 1072px */
 
   .site-footer .widget-column.footer-widget-1,
   .site-footer .widget-column.footer-widget-2 {
@@ -801,7 +832,8 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
   }
 }
 
-@media screen and (min-width: 79em) { /* 1264px */
+@media screen and (min-width: 79em) {
+  /* 1264px */
 
   .navigation-top a {
     font-size: 16px;
@@ -813,7 +845,8 @@ body.page-template-page-full-width #primary .entry-header .entry-title {
   }
 }
 
-@media screen and (min-width: 100em) { /* 1600px */
+@media screen and (min-width: 100em) {
+  /* 1600px */
 
   .hide-social {
     display: block;
